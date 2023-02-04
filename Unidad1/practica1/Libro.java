@@ -46,6 +46,7 @@ public class Libro {
         this.autor = autor;
     }
 
+    //métodos de instancia
     public void setClasificacion(char clasificacion) {
         this.clasificacion = clasificacion;
     }
