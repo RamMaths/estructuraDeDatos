@@ -1,5 +1,4 @@
-package ejerciciossalon;
-import java.math.*;
+package Unidad1.clasesDeAyuda;
 
 public class Triangulo {
     private double ladoA;

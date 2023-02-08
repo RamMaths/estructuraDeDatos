@@ -1,4 +1,4 @@
-package ejerciciossalon;
+package Unidad1.clasesDeAyuda;
 
 public class Persona{
     private String curp;
