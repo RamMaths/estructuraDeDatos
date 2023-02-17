@@ -6,7 +6,7 @@ public class U1Practica3 {
     public static void main(String[] args) {
         String menu = "1.Captura de una canción" + 
                         "\n2.Mostrar datos de cancion" + 
-                        "\n3Duracion total" + 
+                        "\n3.Duracion total" + 
                         "\n4.Cancion de menor duracion" + 
                         "\n5.Salir";
         int opcion = 0, contar = 0;
@@ -19,7 +19,7 @@ public class U1Practica3 {
             if(opcion != 5){
                 switch(opcion){
                     case 1:
-                        if(contar < 5){
+                        if(contar < playlist.length){
                             nombre = JOptionPane.showInputDialog(null, "Nombre de la cancion: ");
                             interprete = JOptionPane.showInputDialog(null, "Interprete de la cancion");
                             duracion = Float.parseFloat(JOptionPane.showInputDialog(null, "Duracion de la cancion"));
