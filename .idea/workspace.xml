@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1af78c4-a365-46eb-8117-b8bea4c96e03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/estructuraDeDatos.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Circulo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Empleado.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Fecha.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Persona.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Rectangulo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Triangulo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/examen1/ExamenU1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/examen1/Serie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/practica1/AppPractica1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/practica1/Libro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/practica2/Pentagono.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/practica2/U1Practica2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/practica3/Cancion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/practica3/U1Practica3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/practica4/Articulo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/practica4/U1Practica4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/tarea1.png" beforeDir="false" />
-    </list>
+    <list default="true" id="e1af78c4-a365-46eb-8117-b8bea4c96e03" name="Changes" comment="Cambios para que funcione con intelliJ" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,8 +53,16 @@
       <option name="presentableId" value="Default" />
       <updated>1675872744105</updated>
       <workItem from="1676743576382" duration="506000" />
-      <workItem from="1676744097657" duration="67000" />
+      <workItem from="1676744097657" duration="367000" />
     </task>
+    <task id="LOCAL-00001" summary="Cambios para que funcione con intelliJ">
+      <created>1676744299121</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676744299121</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,5 +78,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cambios para que funcione con intelliJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios para que funcione con intelliJ" />
   </component>
 </project>
