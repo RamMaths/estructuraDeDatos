@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e1af78c4-a365-46eb-8117-b8bea4c96e03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Unidad1/practica4/Articulo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unidad1/practica3/U1Practica3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unidad1/practica3/U1Practica3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/estructuraDeDatos.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Circulo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Empleado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Fecha.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Rectangulo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Triangulo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/examen1/ExamenU1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/examen1/Serie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/practica1/AppPractica1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/practica1/Libro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/practica2/Pentagono.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/practica2/U1Practica2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/practica3/Cancion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/practica3/U1Practica3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/practica4/Articulo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/practica4/U1Practica4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unidad1/tarea1.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +42,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Mario\Downloads\estructuraDeDatos\src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,7 +73,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675872744105</updated>
+      <workItem from="1676743576382" duration="506000" />
+      <workItem from="1676744097657" duration="67000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
