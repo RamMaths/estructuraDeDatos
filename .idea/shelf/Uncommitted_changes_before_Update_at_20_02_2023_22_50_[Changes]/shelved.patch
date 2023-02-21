@@ -1,0 +1,977 @@
+Index: Unidad1/clasesDeAyuda/Fecha.java
+===================================================================
+diff --git a/Unidad1/clasesDeAyuda/Fecha.java b/Unidad1/clasesDeAyuda/Fecha.java
+deleted file mode 100644
+--- a/Unidad1/clasesDeAyuda/Fecha.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,45 +0,0 @@
+-package Unidad1.clasesDeAyuda;
+-
+-public class Fecha {
+-
+-    private int anio;
+-    private short dia;
+-    private byte mes;
+-
+-    public Fecha(int anio, short dia, byte mes){
+-        super();
+-        this.anio = anio;
+-        this.dia = dia;
+-        this.mes = mes;
+-    }
+-
+-    public int getAnio(){
+-        return anio;
+-    }
+-
+-    public short getDia(){
+-        return dia;
+-    }
+-
+-    public byte getMes(){
+-        return mes;
+-    }
+-
+-    public void setAnio(int anio){
+-        this.anio = anio;
+-    }
+-
+-    public void setDia(short dia){
+-        this.dia = dia;
+-    }
+-
+-    public void setMes(byte mes){
+-        this.mes = mes;
+-    }
+-
+-    @Override
+-    public String toString(){
+-        return "Fecha [" + dia + ", " + mes + ", " + anio + "]";
+-    }
+-
+-}
+Index: Unidad1/clasesDeAyuda/Empleado.java
+===================================================================
+diff --git a/Unidad1/clasesDeAyuda/Empleado.java b/Unidad1/clasesDeAyuda/Empleado.java
+deleted file mode 100644
+--- a/Unidad1/clasesDeAyuda/Empleado.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,60 +0,0 @@
+-package Unidad1.clasesDeAyuda;
+-
+-public class Empleado {
+-
+-    private String nombre;
+-    private int departamento;
+-    private int horasTrabajadas;
+-    private double pagoPorHora;
+-
+-    public Empleado(String nombre, int departamento, int horasTrabajadas, double pagoPorHora){
+-        super();
+-        this.nombre=nombre;
+-        this.departamento=departamento;
+-        this.horasTrabajadas=horasTrabajadas;
+-        this.pagoPorHora=pagoPorHora;
+-    }
+-
+-    public String getNombre(){
+-        return nombre;
+-    }
+-
+-    public int getDepartamento(){
+-        return departamento;
+-    }
+-    
+-    public int getHorasTrabajadas(){
+-        return horasTrabajadas;
+-    }
+-
+-    public double getPagoPorHora(){
+-        return pagoPorHora;
+-    }
+-
+-    public double getSalario(){
+-        return (horasTrabajadas * pagoPorHora);
+-    }
+-
+-    public void setNombre(String nombre){
+-        this.nombre=nombre;
+-    }
+-
+-    public void setDepartamento(int departamento){
+-        this.departamento=departamento;
+-    }
+-    
+-    
+-    public void setHorasTrabajadas(int horasTrabajadas){
+-        this.horasTrabajadas=horasTrabajadas;
+-    }
+-
+-    public void setPagoPorHora(double pagoPorHora){
+-        this.pagoPorHora=pagoPorHora;
+-    }
+-
+-    @Override
+-    public String toString(){
+-        return "\n" + nombre + "\n" + departamento + "\n" + horasTrabajadas + "\n" + pagoPorHora + "\n" + getSalario();
+-    }
+-
+-}
+Index: Unidad1/practica2/Pentagono.java
+===================================================================
+diff --git a/Unidad1/practica2/Pentagono.java b/Unidad1/practica2/Pentagono.java
+deleted file mode 100644
+--- a/Unidad1/practica2/Pentagono.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,51 +0,0 @@
+-public class Pentagono {
+-
+-	private float lado;
+-	private float apotema;
+-	
+-	
+-    //constructores
+-    public Pentagono() {
+-        this.lado = 0;
+-        this.apotema = 0;
+-    }
+-	public Pentagono(float lado, float apotema) {
+-		super();
+-		this.lado = lado;
+-		this.apotema = apotema;
+-	}
+-
+-    //getters
+-	public float getApotema() {
+-        return apotema;
+-	}
+-
+-    public float getLado() {
+-        return lado;
+-    }
+-
+-    //setters
+-	public void setLado(float lado) {
+-        this.lado = lado;
+-	}
+-
+-	public void setApotema(float apotema) {
+-        this.apotema = apotema;
+-	}
+-
+-    //métodos de instancia
+-    public float perimetro() {
+-        return lado * 5;
+-    }
+-
+-    public float area() {
+-        return this.perimetro() * apotema / 2;
+-    }
+-	
+-    //to string
+-    @Override
+-    public String toString() {
+-        return "\nLado: " + lado
+-            +  "\nApotema: " + apotema;
+-    }
+-}
+Index: Unidad1/practica2/U1Practica2.java
+===================================================================
+diff --git a/Unidad1/practica2/U1Practica2.java b/Unidad1/practica2/U1Practica2.java
+deleted file mode 100644
+--- a/Unidad1/practica2/U1Practica2.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,31 +0,0 @@
+-import javax.swing.JOptionPane;
+-
+-public class U1Practica2 {
+-    public static void main(String[] args) {
+-        //a)
+-        Pentagono[] vpent = new Pentagono[6];
+-
+-        //b)
+-        for(int i=1; i<vpent.length; i+=2) {
+-            float lado = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el lado del pentagono " + i));
+-            float apotema = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el apotema del pentagono " + i));
+-            vpent[i] = new Pentagono(lado, apotema);
+-        }
+-
+-        //c)
+-        vpent[0] = new Pentagono(3.4f, 2.9f);
+-
+-        //d)
+-        JOptionPane.showMessageDialog(null, "Datos generales de los pentagonos");
+-        for(int i=0; i<vpent.length; i++) {
+-            if(vpent[i] != null) JOptionPane.showMessageDialog(null, "Pentagono " + i + vpent[i].toString());
+-        }
+-
+-        //e) 
+-        JOptionPane.showMessageDialog(null, "Area y perímetro de los pentagonos");
+-        for(int i=0; i<vpent.length; i++) {
+-            if(vpent[i] != null) JOptionPane.showMessageDialog(null, "Pentagono " + i + "\nPerimetro: " + vpent[i].perimetro() + "\n" 
+-                                                                    + "Area: "+ vpent[i].area());
+-        }
+-    }
+-}
+Index: Unidad1/practica1/AppPractica1.java
+===================================================================
+diff --git a/Unidad1/practica1/AppPractica1.java b/Unidad1/practica1/AppPractica1.java
+deleted file mode 100644
+--- a/Unidad1/practica1/AppPractica1.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,9 +0,0 @@
+-public class AppPractica1 {
+-    public static void main(String[] args) {
+-        Libro lib1, lib2;
+-        lib1 = new Libro();
+-        lib2 = new Libro("El principito", "Antonio", 'A', 345.0f);
+-
+-        System.out.println(lib1.toString() + "\n" + lib2.toString());
+-    }
+-}
+Index: Unidad1/clasesDeAyuda/Triangulo.java
+===================================================================
+diff --git a/Unidad1/clasesDeAyuda/Triangulo.java b/Unidad1/clasesDeAyuda/Triangulo.java
+deleted file mode 100644
+--- a/Unidad1/clasesDeAyuda/Triangulo.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,64 +0,0 @@
+-package Unidad1.clasesDeAyuda;
+-
+-public class Triangulo {
+-    private double ladoA;
+-    private double ladoB;
+-    private double ladoC;
+-
+-    public Triangulo(){
+-        ladoA=25;
+-        ladoB=25;
+-        ladoC=25;
+-    }
+-    
+-    public Triangulo(double ladoA, double ladoB, double ladoC){
+-        super();
+-        this.ladoA = ladoA;
+-        this.ladoB = ladoB;
+-        this.ladoC = ladoC;
+-    }
+-
+-    public double getLadoA(){
+-        return ladoA;
+-    }
+-
+-    public double getLadoB(){
+-        return ladoB;
+-    }
+-    
+-    public double getLadoC(){
+-        return ladoC;
+-    }
+-
+-    public void setLadoA(double ladoA){
+-        this.ladoA = ladoA;
+-    }
+-
+-    public void setLadoB(double ladoB){
+-        this.ladoB = ladoB;
+-    }
+-
+-    public void setLadoC(double ladoC){
+-        this.ladoC = ladoC;
+-    }
+-
+-    public double getArea(){
+-        double p = getPerimetro();
+-        return (Math.sqrt(p*(p-ladoA)*(p-ladoB)*(p-ladoC)));
+-    }
+-
+-    public double getPerimetro(){
+-        return (ladoA + ladoB + ladoC)/2;
+-    }
+-
+-    /**
+-     *El método toString() regresa una cadena formateada
+-      con toda la información (atributos del objeto)
+-      @return la cadena con los tres lados del triángulo 
+-     * */
+-    @Override 
+-    public String toString(){
+-        return "Triangulo [ladoA=" + ladoA + ", ladoB=" + ladoB + ", ladoC=" + ladoC + ", area=" + getArea() + ", perimetro=" + getPerimetro() + "]";
+-    }
+-}
+-
+Index: Unidad1/practica3/Cancion.java
+===================================================================
+diff --git a/Unidad1/practica3/Cancion.java b/Unidad1/practica3/Cancion.java
+deleted file mode 100644
+--- a/Unidad1/practica3/Cancion.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,41 +0,0 @@
+-package Unidad1.practica3;
+-
+-public class Cancion{
+-    private String nombre, interprete;
+-    private float duracion;
+-
+-    public Cancion(){
+-
+-    }
+-    public Cancion(String nombre, String interprete, float duracion){
+-        this.nombre = nombre;
+-        this.interprete = interprete;
+-        this.duracion = duracion;
+-    }
+-
+-    public String getNombre(){
+-        return nombre;
+-    }
+-    public String getInterprete(){
+-        return interprete;
+-    }
+-    public float getDuracion(){
+-        return duracion;
+-    }
+-
+-    public String setNombre(){
+-        return nombre;
+-    }
+-    public String setInterprete(){
+-        return interprete;
+-    }
+-    public float setDuracion(){
+-        return duracion;
+-    }
+-
+-    public String toString(){
+-        return "Nombre: " + nombre + 
+-               "\nInterprete: " + interprete + 
+-               "\nDuracion: " + duracion;
+-    }
+-}
+\ No newline at end of file
+Index: Unidad1/practica4/U1Practica4.java
+===================================================================
+diff --git a/Unidad1/practica4/U1Practica4.java b/Unidad1/practica4/U1Practica4.java
+deleted file mode 100644
+--- a/Unidad1/practica4/U1Practica4.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,57 +0,0 @@
+-package Unidad1.practica4;
+-
+-import javax.swing.JOptionPane;
+-
+-public class U1Practica4 {
+-    public static void main(String[] args) {
+-        Articulo abarrotes[] = new Articulo[10];
+-
+-        String menu = "1.Captura de un articulo" + 
+-                        "\n2.Mostrar datos de un articulo" + 
+-                        "\n3.Total de intercambio" + 
+-                        "\n4.Aumentar 7% a todos los articulos" + 
+-                        "\n5.Salir";
+-        String descripcion;
+-        float precio, total = 0f, suma = 0f;
+-        int opcion = 0, posicion, cantidad;
+-
+-        while(opcion != 5){
+-            opcion = Integer.parseInt(JOptionPane.showInputDialog(null, menu));
+-            if(opcion != 5){
+-                switch(opcion){
+-                    case 1:
+-                        descripcion = JOptionPane.showInputDialog(null, "Descripcion del articulo: ");
+-                        cantidad = Integer.parseInt(JOptionPane.showInputDialog(null, "Cantidad del articulo: "));
+-                        precio = Float.parseFloat(JOptionPane.showInputDialog(null, "Precio:"));
+-                        posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Posicion del articulo"));
+-                        if(abarrotes[posicion] == null && posicion < abarrotes.length && posicion > 0){
+-                            abarrotes[posicion] = new Articulo(descripcion, cantidad, precio);
+-                        } else{
+-                            JOptionPane.showMessageDialog(null, "Ocurrio un error \nIntetelo de nuevo");
+-                        }
+-                        break;
+-                    case 2:
+-                        for (int i = 0; i < abarrotes.length; i++)
+-                            if(abarrotes[i] != null)
+-                                JOptionPane.showMessageDialog(null, "Articulo " + (i+1) + "\n" + abarrotes[i].toString());
+-                        break;
+-                    case 3:
+-                        for (int i = 0; i < abarrotes.length; i++) {
+-                            if(abarrotes[i] != null)
+-                            total = abarrotes[i].getPrecio() * abarrotes[i].getCantidad();
+-                            suma += total;
+-                        }
+-                        JOptionPane.showMessageDialog(null, "Total de inventario: \n" + suma);
+-                        break;
+-                    case 4: 
+-                        for (int i = 0; i < abarrotes.length; i++) {
+-                            if(abarrotes[i] != null){
+-                                abarrotes[i].setPrecio(abarrotes[i].getPrecio() + (abarrotes[i].getPrecio() * .7f ));
+-                            }
+-                        }
+-                        break;
+-                }
+-            }
+-        }
+-    }
+-}
+Index: Unidad1/practica1/Libro.java
+===================================================================
+diff --git a/Unidad1/practica1/Libro.java b/Unidad1/practica1/Libro.java
+deleted file mode 100644
+--- a/Unidad1/practica1/Libro.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,66 +0,0 @@
+-public class Libro {
+-    private String titulo;
+-    private String autor;
+-    private char clasificacion;
+-    private float precio;
+-    
+-    //constructors
+-    public Libro() {
+-        this.titulo = "";
+-        this.autor = "";
+-        this.clasificacion = ' ';
+-        this.precio = 0;
+-    }
+-
+-    public Libro(String titulo, String autor, char clasificacion, float precio) {
+-
+-        this.titulo = titulo;
+-        this.autor = autor;
+-        this.clasificacion = clasificacion;
+-        this.precio = precio;
+-    }
+-
+-    //getters
+-    public String getTitulo() {
+-        return this.titulo;
+-    }
+-
+-    public String getAutor() {
+-        return this.autor;
+-    }
+-
+-    public char getClasificacion() {
+-        return this.clasificacion;
+-    }
+-
+-    public float getPrecio() {
+-        return this.precio;
+-    }
+-
+-    //setters
+-    public void setTitulo(String titulo) {
+-        this.titulo = titulo;
+-    }
+-
+-    public void setAutor(String autor) {
+-        this.autor = autor;
+-    }
+-
+-    //métodos de instancia
+-    public void setClasificacion(char clasificacion) {
+-        this.clasificacion = clasificacion;
+-    }
+-
+-    public void setPrecio(float precio) {
+-        this.precio = precio;
+-    }
+-
+-    //toString method
+-    @Override
+-    public String toString() {
+-        return "\nTitulo: " + this.titulo 
+-            +  "\nAutor: " + this.autor
+-            +  "\nClasificacion: " + this.clasificacion
+-            +  "\nPrecio: $" + this.precio;
+-    }
+-}
+Index: Unidad1/clasesDeAyuda/Persona.java
+===================================================================
+diff --git a/Unidad1/clasesDeAyuda/Persona.java b/Unidad1/clasesDeAyuda/Persona.java
+deleted file mode 100644
+--- a/Unidad1/clasesDeAyuda/Persona.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,53 +0,0 @@
+-package Unidad1.clasesDeAyuda;
+-
+-public class Persona{
+-    private String curp;
+-    private String nombre;
+-    private String telefono;
+-    private Fecha fecha;
+-
+-    public Persona(String curp, String nombre, String telefono, Fecha fecha){
+-        super();
+-        this.curp=curp;
+-        this.nombre=nombre;
+-        this.telefono=telefono;
+-        this.fecha=fecha;
+-    }
+-
+-    public String getCurp(){
+-        return curp;
+-    }
+-
+-    public String getNombre(){
+-        return nombre;
+-    }
+-
+-    public String getTelefono(){
+-        return telefono;
+-    }
+-
+-    public Fecha getFecha(){
+-        return fecha;
+-    }
+-
+-    public void setCurp(String curp){
+-        this.curp=curp;
+-    }
+-
+-    public void setNombre(String nombre){
+-        this.nombre=nombre;
+-    }
+-
+-    public void setTelefono(String telefono){
+-        this.telefono=telefono;
+-    }
+-
+-    public void setFecha(Fecha fecha){
+-        this.fecha=fecha;
+-    }
+-
+-    public String toString(){
+-        return "Persona [curp=" + curp + ", nombre=" + nombre + ", telefono=" + telefono + ", fecha de nacimiento=" + fecha + "]";
+-    }
+-}
+-
+Index: Unidad1/examen1/ExamenU1.java
+===================================================================
+diff --git a/Unidad1/examen1/ExamenU1.java b/Unidad1/examen1/ExamenU1.java
+deleted file mode 100644
+--- a/Unidad1/examen1/ExamenU1.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,70 +0,0 @@
+-package Unidad1.examen1;
+-
+-import javax.swing.JOptionPane;
+-
+-public class ExamenU1 {
+-    public static void main(String[] args) {
+-        Serie hbo[] = new Serie[10];
+-
+-        String menu = "Captura una serie:" +
+-                        "\n1.Captura una serie" + 
+-                        "\n2.Mostrar datos todas las series" + 
+-                        "\n3.Actualizar temporadas" + 
+-                        "\n4.Series del genero COMEDIA" + 
+-                        "\n5.Salir";
+-        String nombre, genero, nombreBuscar;
+-        int temporadas, opcion = 0, posicion = 0;
+-        boolean buscar = false;
+-
+-        while(opcion != 5){
+-            opcion = Integer.parseInt(JOptionPane.showInputDialog(null, menu));
+-            if(opcion != 5){
+-                switch(opcion){
+-                    case 1:
+-                        posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Posicion de la serie"));
+-                        if(posicion < hbo.length && posicion > 0){
+-                            if(hbo[posicion] == null){
+-                                nombre = JOptionPane.showInputDialog(null, "Nombre:");
+-                                temporadas = Integer.parseInt(JOptionPane.showInputDialog(null, "Temporadas"));
+-                                genero = JOptionPane.showInputDialog(null, "Genero:");
+-                                hbo[posicion] = new Serie(nombre, temporadas, genero);
+-                            }else {
+-                                JOptionPane.showMessageDialog(null, "Casilla ya ocupada por otra serie");
+-                            }
+-                        } else {
+-                            JOptionPane.showMessageDialog(null, "Casilla no existe");
+-                        }
+-                        break;
+-                    case 2:
+-                        for (int i = 0; i < hbo.length; i++)
+-                            if(hbo[i] != null)
+-                                JOptionPane.showMessageDialog(null, "Serie " + i + "\n" + hbo[i].toString());
+-                        break;
+-                    case 3:
+-                        nombreBuscar = JOptionPane.showInputDialog(null, "Nombre de la serie a buscar");
+-                        for (int i = 0; i < hbo.length && buscar == false; i++)
+-                            if(hbo[i] != null){
+-                                if(hbo[i].getNombre().equalsIgnoreCase(nombreBuscar)){
+-                                    buscar = true;
+-                                    posicion = i;
+-                                }
+-                            } 
+-                        if(buscar){
+-                            temporadas = Integer.parseInt(JOptionPane.showInputDialog(null, "Serie " + (posicion) + "\n" + hbo[posicion].toString() 
+-                                                                                                                 + "\n\nNueva cantidad de temporadas:"));
+-                            hbo[posicion].setTemporadas(temporadas);
+-                        } else {
+-                            JOptionPane.showMessageDialog(null, "Serie no encontrada");
+-                        }
+-                        buscar = false;
+-                        break;
+-                    case 4: 
+-                        for (int i = 0; i < hbo.length; i++)
+-                            if(hbo[i] != null && hbo[i].getGenero().equalsIgnoreCase("Comedia"))
+-                                JOptionPane.showMessageDialog(null, "Series de comedia\n" + hbo[i].toString());
+-                        break;
+-                }
+-            }
+-        }
+-    }
+-}
+Index: Unidad1/practica4/Articulo.java
+===================================================================
+diff --git a/Unidad1/practica4/Articulo.java b/Unidad1/practica4/Articulo.java
+deleted file mode 100644
+--- a/Unidad1/practica4/Articulo.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,42 +0,0 @@
+-package Unidad1.practica4;
+-
+-public class Articulo {
+-    private String descripcion;
+-    private float precio;
+-    private int cantidad;
+-
+-    public Articulo(){
+-
+-    }
+-    public Articulo(String descripcion, int cantidad, float precio){
+-        this.cantidad = cantidad;
+-        this.descripcion = descripcion;
+-        this.precio = precio;
+-    }
+-
+-    public String getDescripcion(){
+-        return descripcion;
+-    }
+-    public int getCantidad(){
+-        return cantidad;
+-    }
+-    public float getPrecio(){
+-        return precio;
+-    }
+-
+-    public void setDescripcion(String descripcion){
+-        this.descripcion = descripcion;
+-    }
+-    public void setCantidad(int cantidad){
+-        this.cantidad = cantidad;
+-    }
+-    public void setPrecio(float precio){
+-        this.precio = precio;
+-    }
+-
+-    public String toString(){
+-        return  "Descripcion: " + descripcion + 
+-                "Cantidad: " + cantidad + 
+-                "Precio: " + precio;
+-    }
+-}
+Index: Unidad1/examen1/Serie.java
+===================================================================
+diff --git a/Unidad1/examen1/Serie.java b/Unidad1/examen1/Serie.java
+deleted file mode 100644
+--- a/Unidad1/examen1/Serie.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,38 +0,0 @@
+-package Unidad1.examen1;
+-
+-public class Serie {
+-    private String nombre, genero;
+-    private int temporadas;
+-
+-    public Serie(String nombre, int temporadas, String genero){
+-        this.nombre = nombre;
+-        this.temporadas = temporadas;
+-        this.genero = genero;
+-    }
+-
+-    public String getNombre(){
+-        return nombre;
+-    }
+-    public int getTemporadas(){
+-        return temporadas;
+-    }
+-    public String getGenero(){
+-        return genero;
+-    }
+-
+-    public void setNombre(String nombre){
+-        this.nombre = nombre;
+-    }
+-    public void setTemporadas(int temporadas){
+-        this.temporadas = temporadas;
+-    }
+-    public void setGenero(String genero){
+-        this.genero = genero;
+-    }
+-
+-    public String toString(){
+-        return "Nombre: " + nombre + 
+-                "\nTemporadas: " + temporadas + 
+-                "\nGenero: " + genero;
+-    }
+-}
+Index: Unidad1/clasesDeAyuda/Circulo.java
+===================================================================
+diff --git a/Unidad1/clasesDeAyuda/Circulo.java b/Unidad1/clasesDeAyuda/Circulo.java
+deleted file mode 100644
+--- a/Unidad1/clasesDeAyuda/Circulo.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,34 +0,0 @@
+-package Unidad1.clasesDeAyuda;
+-
+-public class Circulo {
+-    private double radio;
+-
+-    public Circulo(){
+-        super();
+-        radio = 1.0;
+-    }
+-
+-    public Circulo(double radio){
+-        this.radio = radio;
+-    }
+-
+-    public double getArea(){
+-        return (Math.PI * (Math.pow(radio,2)));
+-    }
+-
+-    public double getCircunferencia(){
+-        return (2 * Math.PI * radio);
+-    }
+-
+-    public void setRadio(double radio){
+-        this.radio = radio;
+-    }
+-
+-    public double getRadio(){
+-        return radio;
+-    }
+-
+-    public String toString(){
+-        return "radio=" + radio + "\narea=" + getArea() + "\ncircunferencia=" + getCircunferencia();
+-    }
+-}
+Index: Unidad1/clasesDeAyuda/Rectangulo.java
+===================================================================
+diff --git a/Unidad1/clasesDeAyuda/Rectangulo.java b/Unidad1/clasesDeAyuda/Rectangulo.java
+deleted file mode 100644
+--- a/Unidad1/clasesDeAyuda/Rectangulo.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,29 +0,0 @@
+-package Unidad1.clasesDeAyuda;
+-
+-
+-
+-public class Rectangulo {
+-
+-	private double largo;
+-    private double ancho;
+-    
+-    public Rectangulo(){
+-        super();
+-        largo = 25;
+-        ancho = 50;
+-    }
+-
+-    public Rectangulo(double largo, double ancho){
+-        this.largo = largo;
+-        this.ancho = ancho;
+-    }
+-
+-    public double getArea(){
+-        return largo*ancho;
+-    }
+-
+-    @Override
+-	public String toString() {
+-		return "largo=" + largo + ", ancho=" + ancho + ", area=" + getArea();
+-	}
+-}
+Index: Unidad1/practica3/U1Practica3.java
+===================================================================
+diff --git a/Unidad1/practica3/U1Practica3.java b/Unidad1/practica3/U1Practica3.java
+deleted file mode 100644
+--- a/Unidad1/practica3/U1Practica3.java	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ /dev/null	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
+@@ -1,64 +0,0 @@
+-package Unidad1.practica3;
+-
+-import javax.swing.JOptionPane;
+-
+-public class U1Practica3 {
+-    public static void main(String[] args) {
+-        String menu = "1.Captura de una canción" + 
+-                        "\n2.Mostrar datos de cancion" + 
+-                        "\n3.Duracion total" + 
+-                        "\n4.Cancion de menor duracion" + 
+-                        "\n5.Salir";
+-        int opcion = 0, contar = 0;
+-        Cancion playlist[] = new Cancion[5]; 
+-        String nombre, interprete;
+-        float duracion;
+-
+-        while(opcion != 5){
+-            opcion = Integer.parseInt(JOptionPane.showInputDialog(null, menu));
+-            if(opcion != 5){
+-                switch(opcion){
+-                    case 1:
+-                        if(contar < playlist.length){
+-                            nombre = JOptionPane.showInputDialog(null, "Nombre de la cancion: ");
+-                            interprete = JOptionPane.showInputDialog(null, "Interprete de la cancion");
+-                            duracion = Float.parseFloat(JOptionPane.showInputDialog(null, "Duracion de la cancion"));
+-                            playlist[contar] = new Cancion(nombre, interprete, duracion);
+-                            contar++;
+-                        } else{
+-                            JOptionPane.showMessageDialog(null, "CANCION NO PUEDE AGRAGARSE A LA PLAYLIST");
+-                        }
+-                        break;
+-                    case 2:
+-                        for (int i = 0; i < playlist.length; i++) {
+-                            if(playlist[i] != null)
+-                                JOptionPane.showMessageDialog(null, "Cancion " + (i+1) + "\n"
+-                                                                                 + playlist[i].toString());
+-                        }
+-                        break;
+-                    case 3:
+-                        float suma = 0;
+-                        for (int i = 0; i < playlist.length; i++) {
+-                            if(playlist[i] != null)
+-                                suma += playlist[i].getDuracion();
+-                        }
+-                        JOptionPane.showMessageDialog(null, "Duracion total: " + suma);
+-                        break;
+-                    case 4: 
+-                        float menor = playlist[0].getDuracion();
+-                        int pos = 0;
+-                        for (int i = 1; i < playlist.length; i++) {
+-                            if(playlist[i] != null){
+-                                if(playlist[i].getDuracion() < menor){
+-                                    menor = playlist[i].getDuracion();
+-                                    pos = i;
+-                                } 
+-                            }   
+-                        }
+-                        JOptionPane.showMessageDialog(null, "La cancion con menor duracion es: " + playlist[pos].getNombre());
+-                        break;
+-                }
+-            }
+-        }
+-    }
+-}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e1af78c4-a365-46eb-8117-b8bea4c96e03\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/Unidad1/practica4/Articulo.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gitignore\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/modules.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Unidad1/practica3/U1Practica3.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Unidad1/practica3/U1Practica3.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2LSmDyt14Osdu5IPuWGFiezSmOa\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e1af78c4-a365-46eb-8117-b8bea4c96e03\" name=\"Changes\" comment=\"\" />\r\n      <created>1675872744105</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1675872744105</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision efac39ebc609b6ba1b70cee48e3dbfa76880ab93)
++++ b/.idea/workspace.xml	(date 1676955037361)
+@@ -1,20 +1,42 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+     <list default="true" id="e1af78c4-a365-46eb-8117-b8bea4c96e03" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/Unidad1/practica4/Articulo.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Unidad1/practica3/U1Practica3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unidad1/practica3/U1Practica3.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Unidad1/tarea1.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Circulo.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Empleado.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Fecha.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Persona.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Rectangulo.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/clasesDeAyuda/Triangulo.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/examen1/ExamenU1.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/examen1/Serie.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/practica1/AppPractica1.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/practica1/Libro.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/practica2/Pentagono.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/practica2/U1Practica2.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/practica3/Cancion.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/practica3/U1Practica3.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/practica4/Articulo.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/practica4/U1Practica4.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Unidad1/tarea1.png" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+@@ -26,12 +48,24 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "settings.editor.selected.configurable": "0d570cb2-96df-43cc-80da-7f777e6d0afe",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
++  <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="D:\Mario\Documents\Github Repositories\estructuraDeDatos\src" />
++    </key>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -40,7 +74,18 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1675872744105</updated>
++      <workItem from="1676666566295" duration="290000" />
++      <workItem from="1676924804645" duration="189000" />
++      <workItem from="1676925422488" duration="81000" />
++      <workItem from="1676925519330" duration="269000" />
++      <workItem from="1676925805040" duration="124000" />
++      <workItem from="1676925946816" duration="133000" />
++      <workItem from="1676932218501" duration="124000" />
++      <workItem from="1676953747910" duration="1277000" />
+     </task>
+     <servers />
+   </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
+ </project>
+\ No newline at end of file
