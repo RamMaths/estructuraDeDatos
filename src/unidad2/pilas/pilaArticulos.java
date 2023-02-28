@@ -1,5 +1,5 @@
 package unidad2.pilas;
-import unidad1.practica4.Articulo;
+import unidad2.clasesDeAyuda.Articulo;
 
 public class pilaArticulos {
     private Articulo[] p;
